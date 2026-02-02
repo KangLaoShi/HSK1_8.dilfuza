@@ -19,8 +19,9 @@
     <!-- Header -->
     <header class="w-full max-w-4xl mx-auto px-4 py-6 text-center">
         <h1 class="text-2xl md:text-3xl font-bold text-blue-900 mb-1">HSK 1 - 8-dars: 我想喝茶</h1>
-        <p class="text-sm md:text-base text-slate-600 font-medium italic leading-tight">
-            Dilfuza Kāng lǎo shī bilan xitoy tilini o'rganmiz
+        <p class="text-xs md:text-sm text-slate-600 font-medium italic leading-tight">
+            Dilfuza Kāng lǎo shī bilan xitoy tilini o'rganmiz<br>
+            <span class="text-[10px] text-slate-400 not-italic uppercase tracking-tight">(UZ / EN / RU Learning Platform)</span>
         </p>
     </header>
 
@@ -29,73 +30,76 @@
         <div class="flex gap-2 overflow-x-auto pb-3 no-scrollbar snap-x" id="tab-nav">
             <button onclick="switchTab('vocabulary')" id="nav-vocabulary" class="tab-btn flex items-center gap-2 px-4 py-2.5 rounded-full transition whitespace-nowrap snap-start shadow-sm bg-blue-600 text-white font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                <span class="text-sm">Lug'at</span>
+                <span class="text-xs">Lug'at / Vocab / Словарь</span>
             </button>
             <button onclick="switchTab('grammar')" id="nav-grammar" class="tab-btn flex items-center gap-2 px-4 py-2.5 rounded-full transition whitespace-nowrap snap-start shadow-sm bg-white text-blue-600 border border-blue-50">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
-                <span class="text-sm">Grammatika</span>
+                <span class="text-xs">Grammatika / Grammar / Грамматика</span>
             </button>
             <button onclick="switchTab('measureWords')" id="nav-measureWords" class="tab-btn flex items-center gap-2 px-4 py-2.5 rounded-full transition whitespace-nowrap snap-start shadow-sm bg-white text-blue-600 border border-blue-50">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>
-                <span class="text-sm">量词 (Hisob s.)</span>
+                <span class="text-xs">量词 (Measure Words)</span>
             </button>
             <button onclick="switchTab('shopping')" id="nav-shopping" class="tab-btn flex items-center gap-2 px-4 py-2.5 rounded-full transition whitespace-nowrap snap-start shadow-sm bg-white text-blue-600 border border-blue-50">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                <span class="text-sm">Muloqot</span>
+                <span class="text-xs">Muloqot / Dialogue / Диалог</span>
             </button>
         </div>
     </nav>
 
     <!-- Main Container -->
     <main class="w-full max-w-4xl mx-auto px-4 pb-12">
-        <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg p-5 md:p-10 border border-slate-100 min-h-[400px]">
+        <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg p-4 md:p-10 border border-slate-100 min-h-[400px]">
             
             <!-- TAB: VOCABULARY -->
             <div id="tab-vocabulary" class="tab-content active animate-fade-in">
                 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4" id="vocab-grid">
-                    <!-- JS will inject cards here -->
                 </div>
             </div>
 
             <!-- TAB: GRAMMAR -->
             <div id="tab-grammar" class="tab-content animate-fade-in">
                 <div class="space-y-6">
-                    <div class="p-6 bg-blue-600 rounded-2xl text-white shadow-md">
-                        <h3 class="text-sm font-medium opacity-80 mb-4 text-center">Gap tuzilishi: Ega + 想 + Fe'l + To'ldiruvchi</h3>
+                    <div class="p-6 bg-blue-600 rounded-2xl text-white shadow-md text-center">
+                        <h3 class="text-[10px] font-medium opacity-80 mb-4">
+                            Ega + 想 + Fe'l + To'ldiruvchi<br>
+                            Subj. + would like + Verb + Obj.<br>
+                            Подлежащее + 想 + Глагол + Дополнение
+                        </h3>
                         <div class="flex flex-wrap items-center gap-1.5 justify-center text-lg md:text-xl font-bold">
-                            <div id="display-ega" class="bg-white/10 px-3 py-2 rounded-lg min-w-[50px] text-center">?</div>
+                            <div id="display-ega" class="bg-white/10 px-3 py-2 rounded-lg min-w-[50px] text-center border border-white/20">?</div>
                             <span class="opacity-50">+</span>
-                            <div class="bg-green-500 px-3 py-2 rounded-lg min-w-[50px] text-center">想</div>
+                            <div class="bg-green-500 px-3 py-2 rounded-lg min-w-[50px] text-center shadow-sm">想</div>
                             <span class="opacity-50">+</span>
-                            <div id="display-fel" class="bg-purple-500 px-3 py-2 rounded-lg min-w-[50px] text-center">?</div>
+                            <div id="display-fel" class="bg-purple-500 px-3 py-2 rounded-lg min-w-[50px] text-center shadow-sm">?</div>
                             <span class="opacity-50">+</span>
-                            <div id="display-object" class="bg-orange-500 px-3 py-2 rounded-lg min-w-[50px] text-center">?</div>
+                            <div id="display-obj" class="bg-orange-500 px-3 py-2 rounded-lg min-w-[50px] text-center shadow-sm">?</div>
                         </div>
-                        <div id="grammar-feedback" class="hidden mt-4 text-center font-bold text-sm bg-white/20 py-1.5 rounded-full animate-bounce">
-                            Barakalla! (太棒了!)
+                        <div id="grammar-feedback" class="hidden mt-4 text-center font-bold text-xs bg-white/20 py-2 rounded-full animate-bounce">
+                            Barakalla! / Well done! / Молодец! (太棒了!)
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 gap-6">
                         <div class="space-y-3">
-                            <p class="font-bold text-slate-400 uppercase text-[10px] tracking-widest">1. Ega (Subject)</p>
+                            <p class="font-bold text-slate-400 uppercase text-[9px] tracking-widest">1. Ega / Subj. / Подлежащее</p>
                             <div class="flex flex-wrap gap-2" id="ega-btns"></div>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div class="space-y-3">
-                                <p class="font-bold text-slate-400 uppercase text-[10px] tracking-widest">2. Fe'l (Verb)</p>
+                                <p class="font-bold text-slate-400 uppercase text-[9px] tracking-widest">2. Fe'l / Verb / Глагол</p>
                                 <div class="flex flex-wrap gap-2" id="fel-btns"></div>
                             </div>
                             <div class="space-y-3">
-                                <p class="font-bold text-slate-400 uppercase text-[10px] tracking-widest">3. To'ldiruvchi (Object)</p>
+                                <p class="font-bold text-slate-400 uppercase text-[9px] tracking-widest">3. To'ldiruvchi / Obj. / Доп.</p>
                                 <div class="flex flex-wrap gap-2" id="obj-btns"></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="flex gap-3 pt-4 border-t border-slate-100">
-                        <button onclick="checkSentence()" class="flex-1 bg-blue-600 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-blue-100">Tekshirish (检查)</button>
-                        <button onclick="resetSentence()" class="px-6 py-3.5 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm">Tozalash</button>
+                        <button onclick="checkSentence()" class="flex-1 bg-blue-600 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg">Tekshirish / Check / Проверить</button>
+                        <button onclick="resetSentence()" class="px-6 py-3.5 bg-slate-100 text-slate-600 rounded-xl font-bold text-sm">Tozalash / Reset / Сброс</button>
                     </div>
                 </div>
             </div>
@@ -103,9 +107,8 @@
             <!-- TAB: MEASURE WORDS -->
             <div id="tab-measureWords" class="tab-content animate-fade-in">
                 <div class="space-y-4">
-                    <h3 class="text-lg font-bold text-slate-800 mb-2">量词 (Hisob so'zlari)</h3>
+                    <h3 class="text-lg font-bold text-slate-800 mb-2">量词 (Measure Words / Счетные слова)</h3>
                     <div class="grid grid-cols-1 gap-3" id="mw-list">
-                        <!-- JS injects here -->
                     </div>
                 </div>
             </div>
@@ -114,56 +117,49 @@
             <div id="tab-shopping" class="tab-content animate-fade-in">
                 <div class="space-y-6">
                     <div class="flex bg-slate-100 p-1 rounded-xl max-w-xs mx-auto">
-                        <button onclick="setConvType('shop')" id="conv-shop-btn" class="flex-1 py-1.5 rounded-lg text-xs font-bold transition bg-white text-blue-700 shadow-sm">Do'kon</button>
-                        <button onclick="setConvType('restaurant')" id="conv-rest-btn" class="flex-1 py-1.5 rounded-lg text-xs font-bold transition text-slate-500">Restoran</button>
+                        <button onclick="setConvType('shop')" id="conv-shop-btn" class="flex-1 py-1.5 rounded-lg text-xs font-bold transition bg-white text-blue-700 shadow-sm">Do'kon / Shop</button>
+                        <button onclick="setConvType('restaurant')" id="conv-rest-btn" class="flex-1 py-1.5 rounded-lg text-xs font-bold transition text-slate-500">Restoran / Rest.</button>
                     </div>
 
                     <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Gap tuzilishi (Grammatik qoliplar)</p>
-                        <div class="space-y-2 text-xs" id="pattern-display">
-                            <!-- Patterns update here -->
+                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-3 text-center">Grammatik qoliplar / Patterns / Грамм. шаблоны</p>
+                        <div class="space-y-2 text-[10px]" id="pattern-display">
                         </div>
                     </div>
 
                     <div class="space-y-4">
-                        <!-- Dialogue Start -->
                         <div class="flex items-start gap-2">
-                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-600 text-xs shrink-0">A</div>
+                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-700 text-xs shrink-0 shadow-sm">A</div>
                             <div class="bg-slate-50 p-3 rounded-2xl rounded-tl-none border border-slate-100 max-w-[85%]">
-                                <p id="dialogue-q-zh" class="text-lg font-bold text-slate-800">你想买什么？</p>
-                                <p id="dialogue-q-py" class="text-[10px] text-blue-500 font-bold italic">Nǐ xiǎng mǎi shénme?</p>
+                                <p id="dialogue-q-zh" class="text-lg font-bold text-slate-800"></p>
+                                <p id="dialogue-q-py" class="text-[10px] text-blue-500 font-bold italic"></p>
                             </div>
                         </div>
 
-                        <!-- Options -->
                         <div class="flex gap-3 py-2 overflow-x-auto no-scrollbar" id="shop-options">
-                            <!-- JS injects choices here -->
                         </div>
 
-                        <!-- Dialogue Response -->
                         <div id="dialogue-response" class="hidden space-y-4 animate-fade-in">
-                            <!-- Dialogue B -->
                             <div class="flex items-start gap-2 flex-row-reverse">
-                                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-xs shrink-0">B</div>
+                                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-xs shrink-0 shadow-md">B</div>
                                 <div class="bg-blue-600 p-3 rounded-2xl rounded-tr-none text-white text-right max-w-[85%] shadow-md">
-                                    <p id="dialogue-ans-zh" class="text-lg font-bold">我想买一个杯子。</p>
-                                    <p id="dialogue-ans-py" class="text-[10px] opacity-80 italic">Wǒ xiǎng mǎi yí ge bēizi.</p>
+                                    <p id="dialogue-ans-zh" class="text-lg font-bold"></p>
+                                    <p id="dialogue-ans-py" class="text-[10px] opacity-80 italic"></p>
                                 </div>
                             </div>
-                            <!-- Inquiry and Answer (Only Shop) -->
                             <div id="shop-follow-up" class="space-y-4">
-                                <div class="flex items-start gap-2 flex-row-reverse">
-                                    <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-xs shrink-0">B</div>
+                                <div class="flex items-start gap-2 flex-row-reverse border-t border-slate-100 pt-4">
+                                    <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-xs shrink-0 shadow-md">B</div>
                                     <div class="bg-blue-600 p-3 rounded-2xl rounded-tr-none text-white text-right max-w-[85%] shadow-md">
-                                        <p id="dialogue-price-q-zh" class="text-lg font-bold">一个杯子多少钱？</p>
-                                        <p id="dialogue-price-q-py" class="text-[10px] opacity-80 italic">yí ge bēizi duōshao qián?</p>
+                                        <p id="dialogue-price-q-zh" class="text-lg font-bold"></p>
+                                        <p id="dialogue-price-q-py" class="text-[10px] opacity-80 italic"></p>
                                     </div>
                                 </div>
                                 <div class="flex items-start gap-2">
-                                    <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center font-bold text-white text-xs shrink-0">A</div>
+                                    <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center font-bold text-white text-xs shrink-0 shadow-sm">A</div>
                                     <div class="bg-green-50 p-3 rounded-2xl rounded-tl-none border border-green-100 shadow-sm">
-                                        <p id="dialogue-price-ans-zh" class="text-xl font-black text-green-700">28块。</p>
-                                        <p id="dialogue-price-ans-py" class="text-xs text-green-600 italic">28 kuài.</p>
+                                        <p id="dialogue-price-ans-zh" class="text-xl font-black text-green-700"></p>
+                                        <p id="dialogue-price-ans-py" class="text-xs text-green-600 italic"></p>
                                     </div>
                                 </div>
                             </div>
@@ -182,33 +178,32 @@
     </footer>
 
     <script>
-        // --- Data ---
         const vocabulary = [
-            { zh: '想', py: 'xiǎng', uz: 'istamoq / xohlamoq' },
-            { zh: '喝', py: 'hē', uz: 'ichmoq' },
-            { zh: '吃', py: 'chī', uz: 'yemoq' },
-            { zh: '买', py: 'mǎi', uz: 'sotib olmoq' },
-            { zh: '茶', py: 'chá', uz: 'choy' },
-            { zh: '米饭', py: 'mǐfàn', uz: 'guruch' },
-            { zh: '杯子', py: 'bēizi', uz: 'stakan' },
-            { zh: '中国菜', py: 'Zhōngguó cài', uz: 'xitoy taomi' },
-            { zh: '汉语', py: 'Hànyǔ', uz: 'xitoy tili' },
-            { zh: '汉字', py: 'Hànzì', uz: 'xitoy iyerogliflari' },
-            { zh: '书', py: 'shū', uz: 'kitob' },
-            { zh: '钱', py: 'qián', uz: 'pul' },
-            { zh: '多少', py: 'duōshao', uz: 'necha / qancha' },
-            { zh: '做', py: 'zuò', uz: 'qilmoq (tayyorlamoq)' },
-            { zh: '学', py: 'xué', uz: 'o\'rganmoq' },
-            { zh: '写', py: 'xiě', uz: 'yozmoq' },
-            { zh: '说', py: 'shuō', uz: 'gapirmoq' },
-            { zh: '读', py: 'dú', uz: 'o\'qimoq' },
+            { zh: '想', py: 'xiǎng', uz: 'istamoq', en: 'want', ru: 'хотеть' },
+            { zh: '喝', py: 'hē', uz: 'ichmoq', en: 'drink', ru: 'пить' },
+            { zh: '吃', py: 'chī', uz: 'yemoq', en: 'eat', ru: 'есть' },
+            { zh: '买', py: 'mǎi', uz: 'sotib olmoq', en: 'buy', ru: 'купить' },
+            { zh: '茶', py: 'chá', uz: 'choy', en: 'tea', ru: 'чай' },
+            { zh: '米饭', py: 'mǐfàn', uz: 'guruch', en: 'rice', ru: 'рис' },
+            { zh: '杯子', py: 'bēizi', uz: 'stakan', en: 'cup', ru: 'стакан' },
+            { zh: '中国菜', py: 'Zhōngguó cài', uz: 'xitoy taomi', en: 'Chinese food', ru: 'китайская еда' },
+            { zh: '汉语', py: 'Hànyǔ', uz: 'xitoy tili', en: 'Chinese', ru: 'кит. язык' },
+            { zh: '汉字', py: 'Hànzì', uz: 'iyeroglif', en: 'characters', ru: 'иероглифы' },
+            { zh: '书', py: 'shū', uz: 'kitob', en: 'book', ru: 'книга' },
+            { zh: '钱', py: 'qián', uz: 'pul', en: 'money', ru: 'деньги' },
+            { zh: '多少', py: 'duōshao', uz: 'necha / qancha', en: 'how much', ru: 'сколько' },
+            { zh: '做', py: 'zuò', uz: 'qilmoq', en: 'do / make', ru: 'делать' },
+            { zh: '学', py: 'xué', uz: 'o\'rganmoq', en: 'study', ru: 'учить' },
+            { zh: '写', py: 'xiě', uz: 'yozmoq', en: 'write', ru: 'писать' },
+            { zh: '说', py: 'shuō', uz: 'gapirmoq', en: 'speak', ru: 'говорить' },
+            { zh: '读', py: 'dú', uz: 'o\'qimoq', en: 'read', ru: 'читать' },
         ];
 
         const measureWords = [
-            { zh: '个', py: 'gè', desc: 'Eng ko\'p ishlatiladigan umumiy hisob so\'zi.', exampleZh: '一个杯子', examplePy: 'yí ge bēizi', exampleUz: 'bitta stakan' },
-            { zh: '口', py: 'kǒu', desc: 'Oila a\'zolari sonini sanashda ishlatiladi.', exampleZh: '三口人', examplePy: 'sān kǒu rén', exampleUz: 'uch kishi (oilada)' },
-            { zh: '本', py: 'běn', desc: 'Kitoblar va jurnallar sanashda ishlatiladi.', exampleZh: '一本书', examplePy: 'yī běn shū', exampleUz: 'bitta kitob' },
-            { zh: '块', py: 'kuài', desc: 'Pul birligi yoki bo\'laklar uchun ishlatiladi.', exampleZh: '十块钱', examplePy: 'shí kuài qián', exampleUz: 'o\'n yuan (pul)' }
+            { zh: '个', py: 'gè', descUz: 'Umumiy hisob so\'zi.', descEn: 'General measure word.', descRu: 'Общее счетное слово.', exampleZh: '一个杯子', examplePy: 'yí ge bēizi', exampleUz: 'bitta stakan', exampleEn: 'a cup', exampleRu: 'один стакан' },
+            { zh: '口', py: 'kǒu', descUz: 'Oila a\'zolari uchun.', descEn: 'For family members.', descRu: 'Для членов семьи.', exampleZh: '三口人', examplePy: 'sān kǒu rén', exampleUz: 'uch kishi', exampleEn: '3 members', exampleRu: '3 чел. в семье' },
+            { zh: '本', py: 'běn', descUz: 'Kitoblar uchun.', descEn: 'For books.', descRu: 'Для книг.', exampleZh: '一本书', examplePy: 'yī běn shū', exampleUz: 'bitta kitob', exampleEn: 'a book', exampleRu: 'одна книга' },
+            { zh: '块', py: 'kuài', descUz: 'Pul birligi yoki bo\'lak.', descEn: 'Money or pieces.', descRu: 'Деньги или куски.', exampleZh: '十块钱', examplePy: 'shí kuài qián', exampleUz: 'o\'n yuan', exampleEn: 'ten yuan', exampleRu: 'десять юаней' }
         ];
 
         const grammarData = {
@@ -218,28 +213,25 @@
         };
 
         const shopItems = [
-            { id: 'cup', zh: '杯子', mw_zh: '一个杯子', mw_py: 'yí ge bēizi', py: 'bēizi', price: 28, label: 'Stakan' },
-            { id: 'book', zh: '书', mw_zh: '一本书', mw_py: 'yī běn shū', py: 'shū', price: 15, label: 'Kitob' }
+            { id: 'cup', zh: '杯子', mw_zh: '一个杯子', mw_py: 'yí ge bēizi', py: 'bēizi', price: 28, labelUz: 'Stakan', labelEn: 'Cup', labelRu: 'Стакан' },
+            { id: 'book', zh: '书', mw_zh: '一本书', mw_py: 'yī běn shū', py: 'shū', price: 15, labelUz: 'Kitob', labelEn: 'Book', labelRu: 'Книга' }
         ];
 
         const restItems = [
-            { id: 'tea', zh: '茶', py: 'chá', verb: '喝', label: 'Choy' },
-            { id: 'rice', zh: '米饭', py: 'mǐfàn', verb: '吃', label: 'Guruch' }
+            { id: 'tea', zh: '茶', py: 'chá', verb: '喝', labelUz: 'Choy', labelEn: 'Tea', labelRu: 'Чай' },
+            { id: 'rice', zh: '米饭', py: 'mǐfàn', verb: '吃', labelUz: 'Guruch', labelEn: 'Rice', labelRu: 'Рис' }
         ];
 
-        // --- State ---
         let currentTab = 'vocabulary';
         let currentConvType = 'shop';
         let currentSentence = { ega: '', modal: '想', fel: '', obj: '' };
 
-        // --- Core Functions ---
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.tab-btn').forEach(el => {
                 el.classList.remove('bg-blue-600', 'text-white', 'font-bold');
                 el.classList.add('bg-white', 'text-blue-600', 'border', 'border-blue-50');
             });
-
             document.getElementById('tab-' + tabId).classList.add('active');
             const btn = document.getElementById('nav-' + tabId);
             btn.classList.add('bg-blue-600', 'text-white', 'font-bold');
@@ -253,21 +245,20 @@
             window.speechSynthesis.speak(utterance);
         }
 
-        // --- Initialization ---
         function initVocab() {
             const grid = document.getElementById('vocab-grid');
             grid.innerHTML = vocabulary.map(item => `
-                <div class="relative p-4 md:p-6 border border-slate-50 rounded-xl bg-slate-50/30 flex flex-col justify-between">
+                <div class="relative p-3 md:p-6 border border-slate-50 rounded-xl bg-slate-50/30 flex flex-col justify-between">
                     <div class="flex justify-between items-start mb-1">
-                        <div class="text-2xl md:text-3xl font-bold text-slate-800">${item.zh}</div>
-                        <button onclick="speak('${item.zh}')" class="p-1.5 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                        <div class="text-xl md:text-3xl font-bold text-slate-800">${item.zh}</div>
+                        <button onclick="speak('${item.zh}')" class="p-1 bg-blue-100 text-blue-600 rounded-lg shadow-sm active:bg-blue-600 active:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
                         </button>
                     </div>
-                    <div class="text-xs md:text-sm text-blue-600 font-bold mb-3">${item.py}</div>
+                    <div class="text-[10px] md:text-sm text-blue-600 font-bold mb-2">${item.py}</div>
                     <div class="pt-2 border-t border-slate-200/50">
-                        <div class="text-[9px] text-slate-400 font-bold uppercase mb-0.5">O'zbekcha</div>
-                        <div class="text-xs md:text-sm text-slate-700 font-medium leading-tight">${item.uz}</div>
+                        <div class="text-[10px] text-slate-700 font-medium leading-tight">${item.uz}</div>
+                        <div class="text-[9px] text-slate-400 italic">${item.en} / ${item.ru}</div>
                     </div>
                 </div>
             `).join('');
@@ -277,20 +268,34 @@
             const egaGrid = document.getElementById('ega-btns');
             const felGrid = document.getElementById('fel-btns');
             const objGrid = document.getElementById('obj-btns');
-
-            egaGrid.innerHTML = grammarData.ega.map(s => `<button onclick="setPart('ega', '${s}')" class="grammar-ega-btn px-4 py-2 text-sm border rounded-xl bg-white border-slate-100 transition-all">${s}</button>`).join('');
-            felGrid.innerHTML = grammarData.fel.map(f => `<button onclick="setPart('fel', '${f}')" class="grammar-fel-btn px-4 py-2 text-sm border rounded-xl bg-white border-slate-100 transition-all">${f}</button>`).join('');
-            objGrid.innerHTML = grammarData.obj.map(o => `<button onclick="setPart('obj', '${o}')" class="grammar-obj-btn px-4 py-2 text-sm border rounded-xl bg-white border-slate-100 transition-all">${o}</button>`).join('');
+            
+            egaGrid.innerHTML = grammarData.ega.map(s => `<button onclick="setPart('ega', '${s}')" class="grammar-ega-btn px-3 py-1.5 text-xs border rounded-lg bg-white border-slate-100 shadow-sm transition-all">${s}</button>`).join('');
+            
+            // Added Pinyin to Verb buttons
+            felGrid.innerHTML = grammarData.fel.map(f => {
+                const item = vocabulary.find(v => v.zh === f);
+                const py = item ? item.py : '';
+                return `<button onclick="setPart('fel', '${f}')" class="grammar-fel-btn px-3 py-1.5 text-xs border rounded-lg bg-white border-slate-100 shadow-sm transition-all">${f} (${py})</button>`;
+            }).join('');
+            
+            // Added Pinyin to Object buttons
+            objGrid.innerHTML = grammarData.obj.map(o => {
+                const item = vocabulary.find(v => v.zh === o);
+                const py = item ? item.py : '';
+                return `<button onclick="setPart('obj', '${o}')" class="grammar-obj-btn px-3 py-1.5 text-xs border rounded-lg bg-white border-slate-100 shadow-sm transition-all">${o} (${py})</button>`;
+            }).join('');
         }
 
         function setPart(part, value) {
             currentSentence[part] = value.split(' ')[0];
-            document.getElementById('display-' + part).innerText = currentSentence[part];
+            document.getElementById('display-' + (part === 'obj' ? 'obj' : part)).innerText = currentSentence[part];
             
-            // Highlight active
+            // Select buttons of that part
             document.querySelectorAll(`.grammar-${part}-btn`).forEach(b => {
-                b.classList.toggle('bg-blue-600', b.innerText === value);
-                b.classList.toggle('text-white', b.innerText === value);
+                const btnText = b.innerText.split(' ')[0];
+                const valueText = value.split(' ')[0];
+                b.classList.toggle('bg-blue-600', btnText === valueText);
+                b.classList.toggle('text-white', btnText === valueText);
             });
         }
 
@@ -302,27 +307,31 @@
 
         function resetSentence() {
             currentSentence = { ega: '', modal: '想', fel: '', obj: '' };
-            ['ega', 'fel', 'obj'].forEach(p => document.getElementById('display-' + p).innerText = p === 'ega' ? 'Ega' : p === 'fel' ? 'Fe\'l' : 'To\'ldiruvchi');
+            document.getElementById('display-ega').innerText = '?';
+            document.getElementById('display-fel').innerText = '?';
+            document.getElementById('display-obj').innerText = '?';
             document.getElementById('grammar-feedback').classList.add('hidden');
-            document.querySelectorAll('.grammar-ega-btn, .grammar-fel-btn, .grammar-obj-btn').forEach(b => {
-                b.classList.remove('bg-blue-600', 'text-white');
-            });
+            document.querySelectorAll('.grammar-ega-btn, .grammar-fel-btn, .grammar-obj-btn').forEach(b => b.classList.remove('bg-blue-600', 'text-white'));
         }
 
         function initMW() {
             const list = document.getElementById('mw-list');
             list.innerHTML = measureWords.map(mw => `
-                <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-2xl font-black text-blue-600 shadow-sm">${mw.zh}</div>
+                        <div class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-xl font-black text-blue-600 shadow-sm">${mw.zh}</div>
                         <div>
-                            <div class="text-xs font-bold text-slate-400 uppercase">${mw.py}</div>
-                            <div class="text-xs text-slate-600 font-medium">${mw.desc}</div>
+                            <div class="text-[10px] font-bold text-slate-400 uppercase">${mw.py}</div>
+                            <div class="text-[11px] text-slate-600 font-medium">${mw.descUz}</div>
+                            <div class="text-[9px] text-slate-400">${mw.descEn} / ${mw.descRu}</div>
                         </div>
                     </div>
-                    <div class="bg-white px-4 py-2 rounded-xl border border-slate-200 flex items-center justify-between min-w-[120px]">
-                        <span class="font-bold text-blue-900">${mw.exampleZh}</span>
-                        <span class="text-[10px] text-slate-400 ml-3 italic">${mw.exampleUz}</span>
+                    <div class="bg-white px-3 py-2 rounded-lg border border-slate-200 flex items-center justify-between min-w-[140px]">
+                        <span class="font-bold text-blue-900 text-sm">${mw.exampleZh}</span>
+                        <div class="text-right ml-3">
+                            <p class="text-[10px] text-slate-500 italic">${mw.exampleUz}</p>
+                            <p class="text-[8px] text-slate-400">${mw.exampleEn} / ${mw.exampleRu}</p>
+                        </div>
                     </div>
                 </div>
             `).join('');
@@ -331,58 +340,47 @@
         function setConvType(type) {
             currentConvType = type;
             document.getElementById('dialogue-response').classList.add('hidden');
-            
-            // Toggle buttons
             const isShop = type === 'shop';
             document.getElementById('conv-shop-btn').className = `flex-1 py-1.5 rounded-lg text-xs font-bold transition ${isShop ? 'bg-white text-blue-700 shadow-sm' : 'text-slate-500'}`;
             document.getElementById('conv-rest-btn').className = `flex-1 py-1.5 rounded-lg text-xs font-bold transition ${!isShop ? 'bg-white text-blue-700 shadow-sm' : 'text-slate-500'}`;
-
-            // Update Q
             document.getElementById('dialogue-q-zh').innerText = isShop ? '你想买什么？' : '你想喝什么？';
             document.getElementById('dialogue-q-py').innerText = isShop ? 'Nǐ xiǎng mǎi shénme?' : 'Nǐ xiǎng hē shénme?';
 
-            // Update Patterns
             const patterns = document.getElementById('pattern-display');
             patterns.innerHTML = `
                 <div class="flex items-center justify-between bg-white p-2 rounded-lg border border-slate-100">
                     <span class="font-bold text-blue-700">你 想 ${isShop ? '买' : '喝/吃'} 什么？</span>
-                    <span class="text-slate-500 italic">Sen nima ${isShop ? 'sotib olishni' : 'ichishni/yeyishni'} istaysan?</span>
+                    <div class="text-right">
+                        <p class="text-slate-500">Sen nima ... istaysan?</p>
+                        <p class="text-slate-400 text-[8px]">What ... like? / Что ты хочешь ...?</p>
+                    </div>
                 </div>
                 <div class="flex items-center justify-between bg-white p-2 rounded-lg border border-slate-100">
                     <span class="font-bold text-blue-700">我 想 ${isShop ? '买' : '喝/吃'} [narsa]。</span>
-                    <span class="text-slate-500 italic">Men [narsa]ni istayman.</span>
+                    <div class="text-right text-slate-500">Men ... istayman.</div>
                 </div>
-                ${isShop ? `
-                <div class="flex items-center justify-between bg-white p-2 rounded-lg border border-slate-100">
-                    <span class="font-bold text-blue-700">[narsa] 多少钱？</span>
-                    <span class="text-slate-500 italic">[narsa] necha pul?</span>
-                </div>` : ''}
             `;
 
-            // Update Options
             const opts = document.getElementById('shop-options');
             const items = isShop ? shopItems : restItems;
             opts.innerHTML = items.map(item => `
-                <button onclick="selectItem('${item.id}')" class="flex-1 min-w-[100px] p-4 bg-white border-2 border-slate-100 rounded-xl transition hover:border-blue-500">
-                    <span class="text-2xl block mb-1">${item.zh}</span>
-                    <span class="text-xs font-bold block">${item.label}</span>
+                <button onclick="selectItem('${item.id}')" class="flex-1 min-w-[100px] p-3 bg-white border-2 border-slate-100 rounded-xl transition shadow-sm active:border-blue-500">
+                    <span class="text-xl block mb-1">${item.zh}</span>
+                    <span class="text-[10px] font-bold block text-slate-600">${item.labelUz}</span>
+                    <span class="text-[8px] text-slate-400 block">${item.labelEn} / ${item.labelRu}</span>
                 </button>
             `).join('');
         }
 
         function selectItem(id) {
             const isShop = currentConvType === 'shop';
-            const item = (isShop ? shopItems : restItems).find(i => i.id === id);
+            const items = isShop ? shopItems : restItems;
+            const item = items.find(i => i.id === id);
             if (!item) return;
-
-            const res = document.getElementById('dialogue-response');
-            res.classList.remove('hidden');
-
-            // B answer
+            document.getElementById('dialogue-response').classList.remove('hidden');
             if (isShop) {
                 document.getElementById('dialogue-ans-zh').innerText = '我想买' + item.mw_zh + '。';
                 document.getElementById('dialogue-ans-py').innerText = 'Wǒ xiǎng mǎi ' + item.mw_py + '.';
-                
                 document.getElementById('shop-follow-up').classList.remove('hidden');
                 document.getElementById('dialogue-price-q-zh').innerText = item.mw_zh + '多少钱？';
                 document.getElementById('dialogue-price-q-py').innerText = item.mw_py + ' duōshao qián?';
@@ -397,7 +395,6 @@
             }
         }
 
-        // --- Bootstrap ---
         window.onload = () => {
             initVocab();
             initGrammar();
